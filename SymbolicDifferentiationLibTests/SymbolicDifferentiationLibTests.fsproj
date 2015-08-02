@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f0e5f06e-712c-4255-b2ff-52ef9ecce656}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SymbolicDifferentiationLibTests</RootNamespace>
+    <AssemblyName>SymbolicDifferentiationLibTests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Name>SymbolicDifferentiationLibTests</Name>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <ReferencePath>
+    </ReferencePath>
+    <TargetFSharpCoreVersion>2.3.0.0</TargetFSharpCoreVersion>
+    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <Name>nunit.framework</Name>
+      <AssemblyName>nunit.framework.dll</AssemblyName>
+      <HintPath>..\..\..\..\..\..\..\Program Files\NUnit 2.4.7\bin\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SymbolicDifferentiation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Name>SymbolicDifferentiation</Name>
+      <AssemblyName>SymbolicDifferentiation.dll</AssemblyName>
+      <HintPath>..\SymbolicDifferentiation\bin\Debug\SymbolicDifferentiation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SymbolicDifferentiation.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Name>SymbolicDifferentiation.Core</Name>
+      <AssemblyName>SymbolicDifferentiation.Core.dll</AssemblyName>
+      <HintPath>..\SimbolicDifferentiation.Core\bin\Debug\SymbolicDifferentiation.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SymbolicDifferentiation.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Name>SymbolicDifferentiation.Tests</Name>
+      <AssemblyName>SymbolicDifferentiation.Tests.dll</AssemblyName>
+      <HintPath>..\SymbolicDifferentiationTests\bin\Debug\SymbolicDifferentiation.Tests.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="QuotationsConvertTests.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SymbolicDifferentiationLib\SymbolicDifferentiationLib.fsproj">
+      <Name>SymbolicDifferentiationLib</Name>
+      <Project>{50027d53-bfee-4aa9-be67-b4598353dd9f}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '11.0'">
+      <PropertyGroup>
+        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets</FSharpTargetsPath>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets</FSharpTargetsPath>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <Import Project="$(FSharpTargetsPath)" Condition="Exists('$(FSharpTargetsPath)')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

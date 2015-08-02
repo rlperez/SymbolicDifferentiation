@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A24939F5-5333-45B7-BAEC-BC4A518597A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SymbolicDifferentiation</RootNamespace>
+    <AssemblyName>SymbolicDifferentiation</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FSharp.Core, Version=1.9.6.0, Culture=neutral, PublicKeyToken=a19089b1c74d0809, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\FSharp-1.9.6.0\bin\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Computation\ParallelFunctions.cs" />
+    <Compile Include="ParserCombinators\CSParserLib.cs" />
+    <Compile Include="ParserCombinators\Consumed.cs" />
+    <Compile Include="ParserCombinators\ErrorInfo.cs" />
+    <Compile Include="ParserCombinators\CSParser.cs" />
+    <Compile Include="ParserCombinators\Linq.cs" />
+    <Compile Include="ParserCombinators\ParseResult.cs" />
+    <Compile Include="ParserCombinators\ParserState.cs" />
+    <Compile Include="ParserCombinators\Symbol.cs" />
+    <Compile Include="Sugar.cs" />
+    <Compile Include="Visitors\ExpressionEqualityComparer.cs" />
+    <Compile Include="Extensions\SimplifierExtension.cs" />
+    <Compile Include="Visitors\Derivative.cs" />
+    <Compile Include="Extensions\ExpressionExtension.cs" />
+    <Compile Include="Visitors\LinqExpressionVisitor.cs" />
+    <Compile Include="Extensions\ParserExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tokenizer.cs" />
+    <Compile Include="Extensions\TokensExtensions.cs" />
+    <Compile Include="Visitors\Simplifier.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimbolicDifferentiation.Core\SymbolicDifferentiation.Core.csproj">
+      <Project>{34911264-DB7F-49A6-B88F-72C13168EA00}</Project>
+      <Name>SymbolicDifferentiation.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SymbolicDifferentiationLib\SymbolicDifferentiationLib.fsproj">
+      <Project>{50027D53-BFEE-4AA9-BE67-B4598353DD9F}</Project>
+      <Name>SymbolicDifferentiationLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{3AA86DD4-E168-41A8-AB8C-45B2D911BB9E}"
+	ProjectSection(SolutionItems) = preProject
+		License.htm = License.htm
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolicDifferentiation", "SymbolicDifferentiation\SymbolicDifferentiation.csproj", "{A24939F5-5333-45B7-BAEC-BC4A518597A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolicDifferentiation.Tests", "SymbolicDifferentiationTests\SymbolicDifferentiation.Tests.csproj", "{56437941-A7C2-4613-B947-59B9FE7682CA}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SymbolicDifferentiationLib", "SymbolicDifferentiationLib\SymbolicDifferentiationLib.fsproj", "{50027D53-BFEE-4AA9-BE67-B4598353DD9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolicDifferentiation.Core", "SimbolicDifferentiation.Core\SymbolicDifferentiation.Core.csproj", "{34911264-DB7F-49A6-B88F-72C13168EA00}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SymbolicDifferentiationLibTests", "SymbolicDifferentiationLibTests\SymbolicDifferentiationLibTests.fsproj", "{F0E5F06E-712C-4255-B2FF-52EF9ECCE656}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A24939F5-5333-45B7-BAEC-BC4A518597A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24939F5-5333-45B7-BAEC-BC4A518597A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24939F5-5333-45B7-BAEC-BC4A518597A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24939F5-5333-45B7-BAEC-BC4A518597A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56437941-A7C2-4613-B947-59B9FE7682CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56437941-A7C2-4613-B947-59B9FE7682CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56437941-A7C2-4613-B947-59B9FE7682CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56437941-A7C2-4613-B947-59B9FE7682CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50027D53-BFEE-4AA9-BE67-B4598353DD9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50027D53-BFEE-4AA9-BE67-B4598353DD9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50027D53-BFEE-4AA9-BE67-B4598353DD9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50027D53-BFEE-4AA9-BE67-B4598353DD9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34911264-DB7F-49A6-B88F-72C13168EA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34911264-DB7F-49A6-B88F-72C13168EA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34911264-DB7F-49A6-B88F-72C13168EA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34911264-DB7F-49A6-B88F-72C13168EA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E5F06E-712C-4255-B2FF-52EF9ECCE656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E5F06E-712C-4255-B2FF-52EF9ECCE656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E5F06E-712C-4255-B2FF-52EF9ECCE656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E5F06E-712C-4255-B2FF-52EF9ECCE656}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
